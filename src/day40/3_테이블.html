@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 3_테이블.html </title>
+</head>
+<body>
+
+    <h1> 테이블 </h1>
+    <table border="1" >
+      <thead>
+        <tr>
+          <th> 제목1 </th>  <th> 제목2 </th>  <th> 제목3 </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr> <!-- 행 추가 -->
+          <td> 내용물1 </td> <td> 내용물2 </td>   <td> 내용물3 </td>
+        </tr>
+        <tr> <!-- 행 추가 -->
+          <td colspan="3"> 내용물4(열병합 3칸) </td>
+        </tr>
+        <tr>  <!-- 행 추가 -->
+          <td rowspan="2"> 내용물5(행병합 2칸) </td>
+          <td> 내용물6 </td>
+          <td> 내용물7 </td>
+        </tr>
+        <tr> <!-- 행 추가 -->
+          <td> 내용물8 </td>
+          <td> 내용물9 </td>
+        </tr>
+      </tbody>
+    </table>
+
+</body>
+</html>

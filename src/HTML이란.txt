@@ -1,0 +1,90 @@
+[HTML] H(Hyper) T(Text) M(Markup) L(Language)
+    - 하이퍼(이동가능한)텍스트(문자들) 마크업(특정한구조) 언어
+[마크업]
+    - html언어를 만든 사람이 구조화한 규칙/약속, < > : 꺽은 괄호 사용한다.
+[주석]
+    <!-- 주석 -->
+
+[주요마크업]
+    - 마크업 형태 종류
+        1. <마크업명> 내용물 </마크업명>
+        2. <마크업명 />
+    - 마크업의 속성이란
+        1. 형태 : <마크업명 속성명=값 속성명=값 >
+        2. 목적 : 마크업의 고유한 기능을 적용할수 있다.
+
+1.<html> </html>        : html시작과 html끝 알리는 마크업
+2.<head> </head>        : html문서의 다양한 옵션정보 읽어드리는 마크업
+3.<title> </title>      : html문서의 제목
+4.<body> </body>        : html문서의 *본문*
+
+5.<h1> </h1>            : h1 ~ h6 까지 제목 마크업 , 글자크기/굵게 제공
+6.<p> </p>              : 문단 마크업 , 구분/여백 제공
+7.<br />                : 줄바꿈 마크업
+8.<hr />                : 가로 구분선 마크업
+9.<ul> </ul>            : unorder list 순서없는목록
+10.<ol> </ol>           : order list 순서있는목록
+11.<li> </li>           : 목록의 항목 , *ul 또는 ol 마크업 안에서 사용된다.
+
+12.<img src="" />       : 이미지 마크업
+    - 속성
+        src=" "         : 표시할 이미지의 파일 경로 , 확장자명 포함
+    - 경로기준 종류
+        1. 절대경로 : C:\Users\admin\Desktop\kim\src\day39\짱구.jpg
+        2. 상대경로 : (현재파일기준)    ../ : 상위로 이동 뜻    ./ : 현재경로 뜻(생략가능)
+            - 같은 폴더내 존재하면 : ./파일명.확장자
+            - 상위 폴더내 존재하면 : ../파일명.확장자
+            - 하위 폴더내 존재하면 : ./하위폴더명/파일명.확장자
+            - 형제 폴더내 존재하면 : ../형제폴더명/파일명.확장자
+
+13. <audio> </audio> , <video> </video>
+    - 속성 :
+        - controls      : 오디오/비디오 실행 컨트롤러 표시 여부
+        - autoplay      : 오디오/비디오 자동 실행 , *브라우저에 정책에 따라 사용이 불가능.
+        - muted         : 음소거 와 자동실행은 같이 사용 가능.
+
+14. <form> </form> : 폼 안에 있는 입력상자들의 데이터를 (JAVA)전송 기능 내장
+15. <input /> : 입력 상자
+    - type 속성                  : 입력상자의 종류
+    1. type = "text"            : 문자열 입력상자 , 기본값
+    2. type = "password"        : 가려진 문자열 입력상자 , 패스워드
+    3. type = "date"            : 날짜 입력 상자
+    4. type = "datetime-local"  : 날짜/시간 입력 상자
+    5. type = "file"            : 첨부파일 입력 상자
+    6. type = "radio"           : 원형 체크 입력 상자 , 단일선택
+    7. type = "checkbox"        : 네모 체크 입력 상자 , 복수선택
+        - name속성의 값을 동일하게 해서 서로다른 input들을 그룹하기.
+    8. type = "button"          : 버튼(클릭) 입력 상자
+        - <input type="button" value="가입버튼1">
+        - <button type="button"> 가입버튼2 </button>
+    9. type = "submit"          : 폼 전송 버튼 (입력상자)
+    10. type = "reset"          : 폼 안에 있는 입력상자 모두 초기화 버튼
+
+    - value 속성 : 입력상자에 입력된 데이터를 갖는 속성
+        value="유재석"
+    - readonly 속성 : 읽기모드 속성 적용 입력상자
+        readonly="true"
+    - placeholder 속성 : 입력 전에 가이드라인 텍스트 , 입력값이 존재하면 보이지 않는다.
+    - maxlength 속성 : 입력상자의 최대 입력 문자수
+        maxlength="5"
+    - disabled 속성 : 입력상자 사용금지, 클릭 조차 막기.
+        disabled="true"
+    - name 속성 : 마크업들이 갖는 식별(선택자) 이름
+        name = "가입경로"
+
+16. <textarea rows="가로수" cols="세로수"> </textarea> : 긴글 텍스트 입력 상자
+17  <select > </select> : 목록상자
+18. <option> </option>  항목
+
+19. <table> </table> : 테이블 마크업
+    - border="1" : 테이블의 테두리 속성
+    - 테이블의 하위 마크업
+    1. <thead> </thead> : 테이블의 제목 구역 , 식별용도
+    2. <tbody> </tbody> : 테이블의 본문 구역 , 식별용도
+    3. <tfoot> </tfoot> : 테이블의 하단 구역 , 식별용도
+    4. <tr> </tr>       : 테이블 행(table row/행) 추가
+    5. <th> </th>       : 테이블 제목(table col/열) 셀 추가
+    6. <td> </td>       : 테이블 데이터( table data) 셀 추가
+        - 셀(한칸) 병합 관련 속성
+        colspan="열병합수"
+        rowspan="행병합수"
